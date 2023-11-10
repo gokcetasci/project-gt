@@ -7,7 +7,7 @@ import { BsSpotify } from "react-icons/bs";
 
 function Footer() {
   return (
-    <footer className="bg-[#080243] to-indigo-900 text-white py-6">
+    <footer className="bg-[#080243] to-indigo-900 text-white py-6 bottom-0">
 
       <div className="flex justify-between mb-10 mx-24">
         <div className="w-1/5 flex flex-col justify-center items-center pr-10">
