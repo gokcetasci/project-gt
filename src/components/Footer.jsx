@@ -11,7 +11,7 @@ function Footer() {
 
       <div className="flex justify-between mb-10 mx-24">
         <div className="w-1/5 flex flex-col justify-center items-center pr-10">
-          <div className="text-3xl font-bold italic text-white mb-1.5 text-blue-300 mb-3 ">Logo</div>
+          <div className="text-3xl font-bold italic text-white mb-3 ">Logo</div>
           <div className="w-20 h-px bg-blue-400 mb-3"></div>
           <p className='text-sm text-center text-gray-200'><em>Lorem ipsum dolor sit, amet conse ctetu radipisicing elit. Iste, repellendus!</em></p>
         </div>
@@ -46,7 +46,7 @@ function Footer() {
 
         <div className="w-1/5">
           <div className='flex flex-row'>
-            <h3 className="text-gray-200 mt-2 mb-2 font-bold text-l mb-5">Bizi Takip Edin</h3>
+            <h3 className="text-gray-200 mt-2 font-bold text-l mb-5">Bizi Takip Edin</h3>
           </div>
           <div className="flex flex-row space-x-4">
             <div className="relative">
@@ -90,7 +90,7 @@ function Footer() {
 
         <div className='ml-5'></div>
 
-        <p className='ml-5 ml-auto'>©Copyright 2023 Şirket Adı</p>
+        <p className=' ml-auto'>©Copyright 2023 Şirket Adı</p>
       </div>
 
     </footer>
