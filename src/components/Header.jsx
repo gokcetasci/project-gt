@@ -1,38 +1,36 @@
 import React from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
 
-
-
 function Header() {
     return (
-        <header className="bg-gradient-to-r from-purple-800 via-blue-800 to-purple-800 p-4 shadow-md">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="text-2xl font-bold italic text-white animate-pulse">Logo</div>
-                <div id='events' class="flex items-center space-x-4">
+        <header id='header' className="bg-gradient-to-r from-purple-800 via-blue-800 to-purple-800 p-4 shadow-md ">
+            <div className="mx-auto flex justify-between items-center ">
+                <logo className="text-2xl font-bold italic text-white animate-pulse md:w-auto">Logo</logo>
+                <div id='headerevent' className="hidden sm:block lg:flex items-center space-x-4">
                     <nav class="space-x-4">
-                        <a href="#" class="text-white hover:text-gray-300 relative group">
+                        <a href="#" className="text-white hover:text-gray-300 relative group">
                             Etkinlikler
                             <span class="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </a>
-                        <a href="#" class="text-white hover:text-gray-300 relative group">
+                        <a href="#" className="text-white hover:text-gray-300 relative group">
                             Konserler
                             <span class="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </a>
-                        <a href="#" class="text-white hover:text-gray-300 relative group">
+                        <a href="#" className="text-white hover:text-gray-300 relative group">
                             Spor
-                            <span class="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                            <span className="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </a>
-                        <a href="#" class="text-white hover:text-gray-300 relative group">
+                        <a href="#" className="text-white hover:text-gray-300 relative group">
                             Tiyatro
-                            <span class="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                            <span className="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </a>
-                        <a href="#" class="text-white hover:text-gray-300 relative group">
+                        <a href="#" className="text-white hover:text-gray-300 relative group ">
                             Aile
-                            <span class="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                            <span className="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </a>
                     </nav>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div id='searchbarheader' className="flex items-center space-x-4">
                     <div className="flex items-center">
                         <div className="relative">
                             <input 
@@ -49,7 +47,7 @@ function Header() {
 
                     </div>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div id='headerbuttons' className="flex items-center space-x-4">
                     <a href="#" className="text-white hover:text-white relative group transform hover:scale-105 transition-transform">
                         Giriş Yap
                         <span className="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
