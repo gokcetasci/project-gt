@@ -3,7 +3,9 @@ import { AiOutlineSearch } from "react-icons/ai";
 import {SlBasket} from "react-icons/sl"
 
 function Header() {
+    
     const [cartOpen, setCartOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     const openCart = () => {
         setCartOpen(!cartOpen);
@@ -55,9 +57,16 @@ function Header() {
                 </div>
                 
                 <div id='headerbuttons' className="flex items-center space-x-4">
-                    <div className="relative">
-                        <button onClick={openCart}>
-                            <SlBasket className="text-white" size={24} />
+                <div className="relative">
+                        <button
+                            onClick={openCart}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                        >
+                            <SlBasket
+                                className={`text-white ${isHovered ? 'text-blue-400' : ''}`}
+                                size={24}
+                            />
                         </button>
                         {cartOpen && (
                             <div className="absolute bg-gray-800 text-white p-4 rounded-md top-12 right-0">
