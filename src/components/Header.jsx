@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
-import {SlBasket} from "react-icons/sl"
+import { SlBasket } from "react-icons/sl"
 
 function Header() {
-    
+
     const [cartOpen, setCartOpen] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -41,7 +41,7 @@ function Header() {
                 <div id='searchbarheader' className="flex items-center space-x-4">
                     <div className="flex items-center">
                         <div className="relative">
-                            <input 
+                            <input
                                 type="text"
                                 placeholder="Etkinlik, sanatçı ya da mekan arayın..."
                                 className="px-4 py-1 rounded-md border-2 border-solid border-white focus:outline-none w-96 placeholder:italic text-sm"
@@ -55,18 +55,22 @@ function Header() {
 
                     </div>
                 </div>
-                
+
                 <div id='headerbuttons' className="flex items-center space-x-4">
-                <div className="relative">
+                    <div className="relative flex items-center mr-3">
                         <button
                             onClick={openCart}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
+                            className="flex items-center"
                         >
                             <SlBasket
-                                className={`text-white ${isHovered ? 'text-blue-400' : ''}`}
+                                className={`mr-1 ${isHovered ? 'text-blue-400' : 'text-white'}`}
                                 size={24}
+                                
                             />
+
+                            <span className={`mr-1 ${isHovered ? 'text-blue-400' : 'text-white'}`}>Sepetim</span>
                         </button>
                         {cartOpen && (
                             <div className="absolute bg-gray-800 text-white p-4 rounded-md top-12 right-0">
