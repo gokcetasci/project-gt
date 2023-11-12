@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
+import {SlBasket} from "react-icons/sl"
 
 function Header() {
+    const [cartOpen, setCartOpen] = useState(false);
+
+    const openCart = () => {
+        setCartOpen(!cartOpen);
+    }
     return (
         <header id='header' className="bg-gradient-to-r from-purple-800 via-blue-800 to-purple-800 p-4 shadow-md ">
             <div className="mx-auto flex justify-between items-center ">
@@ -47,7 +53,19 @@ function Header() {
 
                     </div>
                 </div>
+                
                 <div id='headerbuttons' className="flex items-center space-x-4">
+                    <div className="relative">
+                        <button onClick={openCart}>
+                            <SlBasket className="text-white" size={24} />
+                        </button>
+                        {cartOpen && (
+                            <div className="absolute bg-gray-800 text-white p-4 rounded-md top-12 right-0">
+                                Sepet İçeriği Burada
+                                {/* Sepet içeriği, sepetteki ürünlerin listesi, miktarı vs. */}
+                            </div>
+                        )}
+                    </div>
                     <a href="#" className="text-white hover:text-white relative group transform hover:scale-105 transition-transform">
                         Giriş Yap
                         <span className="absolute w-full h-0.5 bg-blue-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
